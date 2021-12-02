@@ -2,6 +2,8 @@ $alpha_black_shadow: rgba(0, 0, 0, 0.15);
 $ice-white: #fafbfc;
 $light-purple: #b07dfb;
 $purple: #8844ee;
+$space-pattern: 30px;
+$box-shadow: 5px 5px 15px 0px $alpha_black_shadow;
 
 body,
 p,
@@ -69,7 +71,7 @@ img {
 .header {
   grid-area: header;
   background: linear-gradient(135deg, $purple, $light-purple);
-  padding: 30px;
+  padding: $space-pattern;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
@@ -99,7 +101,7 @@ img {
 }
 
 .header li + li {
-  margin-left: 30px;
+  margin-left: $space-pattern;
 }
 
 @media (max-width: 760px) {
@@ -122,18 +124,18 @@ img {
 .sidenav {
   grid-area: sidenav;
   background: $ice-white;
-  padding: 30px;
+  padding: $space-pattern;
 }
 
 .sidenav li a {
   display: block;
   min-width: 60px;
   max-width: 100px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto $space-pattern auto;
   background: white;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 5px 5px 15px 0px $alpha_black_shadow;
+  box-shadow: $box-shadow;
   transition: 0.1s ease-out;
 }
 
@@ -143,7 +145,7 @@ img {
 
 @keyframes seta {
   from {
-    right: 30px;
+    right: $space-pattern;
   }
   to {
     right: 20px;
@@ -161,7 +163,7 @@ img {
     content: "→";
     position: absolute;
     top: 5px;
-    right: 30px;
+    right: $space-pattern;
     color: rgba(0, 0, 0, 0.3);
     animation: seta 0.5s ease-in 0s infinite alternate;
   }
@@ -172,10 +174,10 @@ img {
     flex: 1 0 60px;
   }
   .sidenav {
-    padding: 0 30px;
+    padding: 0 $space-pattern;
   }
   .sidenav li a {
-    margin: 30px 30px 30px 0;
+    margin: $space-pattern $space-pattern $space-pattern 0;
   }
 }
 
@@ -185,10 +187,10 @@ img {
   grid-area: content;
   max-width: 900px;
   margin: 0 auto;
-  padding: 30px;
+  padding: $space-pattern;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: $space-pattern;
 }
 
 @media (max-width: 600px) {
@@ -220,7 +222,7 @@ p {
 }
 
 .informacoes p + p {
-  margin-top: 30px;
+  margin-top: $space-pattern;
 }
 
 /*TITULO*/
@@ -252,12 +254,12 @@ p {
   text-align: center;
   background: linear-gradient(135deg, $purple, $light-purple);
   border-radius: 5px;
-  box-shadow: 5px 5px 15px 0px $alpha_black_shadow;
+  box-shadow: $box-shadow;
   position: relative;
 }
 
 .caracteristicas > div:first-child {
-  margin-right: 30px;
+  margin-right: $space-pattern;
 }
 
 .caracteristicas span {
@@ -288,9 +290,9 @@ p {
 .citacao,
 .atributos {
   align-self: start;
-  padding: 30px;
+  padding: $space-pattern;
   border-radius: 5px;
-  box-shadow: 5px 5px 15px 0px $alpha_black_shadow;
+  box-shadow: $box-shadow;
   background: linear-gradient(135deg, $purple, $light-purple);
 }
 
@@ -321,8 +323,8 @@ p {
   background: $ice-white;
   display: grid;
   align-content: start;
-  padding: 30px;
-  grid-gap: 30px;
+  padding: $space-pattern;
+  grid-gap: $space-pattern;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
@@ -336,5 +338,5 @@ p {
 .footer p {
   color: white;
   text-align: center;
-  padding: 30px;
+  padding: $space-pattern;
 }
