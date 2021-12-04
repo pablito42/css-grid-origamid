@@ -1,9 +1,4 @@
-$alpha_black_shadow: rgba(0, 0, 0, 0.15);
-$ice-white: #fafbfc;
-$light-purple: #b07dfb;
-$purple: #8844ee;
-$space-pattern: 30px;
-$box-shadow: 5px 5px 15px 0px $alpha_black_shadow;
+@import 'variables';
 
 body,
 p,
